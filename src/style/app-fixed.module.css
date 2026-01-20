@@ -2865,6 +2865,8 @@ form label,
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-right: 0;
+  margin-left: 0;
+  margin-top: 1rem;
 }
 
 .calendar__search {
@@ -9726,6 +9728,8 @@ form {
   width: 100%;
   overflow: auto;
   overflow-x: 'hidden';
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .maxWidth {
@@ -11127,6 +11131,55 @@ form {
 
 .organizationsFlexContainer {
   flex: 1;
+}
+
+.organizationsHeader {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+/* Ensure header and title align with Bootstrap row/column content */
+/* Bootstrap 5.3: rows have negative margins (-0.75rem), columns have padding (0.75rem) */
+/* Net effect: column content aligns with container edges */
+/* Organization cards have margin: 0.5rem, so they're offset by that amount */
+.mainContainerOrganization > .d-flex.justify-content-between {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mainContainerOrganization > .d-flex.justify-content-between h1 {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Match Bootstrap row alignment - rows extend to container edges */
+/* Bootstrap columns have padding (0.75rem), so header needs same padding to align with card content */
+.mainContainerOrganization > .organizationsHeader {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Title section should also align with header */
+.mainContainerOrganization > .d-flex.justify-content-between {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Ensure Bootstrap row uses standard negative margins to extend to container edges */
+.mainContainerOrganization .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
 }
 
 /* Groups page styles */

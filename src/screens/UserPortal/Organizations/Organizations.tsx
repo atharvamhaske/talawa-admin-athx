@@ -296,7 +296,9 @@ export default function Organizations(): React.JSX.Element {
           </div>
 
           {/* Refactored Header Structure */}
-          <div className={styles.calendar__header}>
+          <div
+            className={`${styles.calendar__header} ${styles.organizationsHeader}`}
+          >
             <SearchFilterBar
               hasDropdowns={true}
               dropdowns={[
